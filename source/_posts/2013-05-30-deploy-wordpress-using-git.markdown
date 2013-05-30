@@ -42,12 +42,11 @@ Now we need to create the directory where the blog should be deployed to
     mkdir /srv/www/blog/
 ```
 
-and add the ```post-receive``` hook by adding the following to the ```blog.git/hooks/post-receive``` file and making it executable.
+and add the ```post-receive``` hook by adding the following to the ```blog.git/hooks/post-receive``` file and making it executable ```chmod +x blog.git/hooks/post-receive```.
 
 ``` sh post-receive hook
     #!/bin/sh
     GIT_WORK_TREE=/src/www/blog git checkout -f
-    chmod +x blog.git/hooks/post-receive
 ```
 
 #### The deployment part
