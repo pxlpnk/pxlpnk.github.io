@@ -3,8 +3,8 @@
 # ----------------------- #
 
 url: http://pxlpnk.github.io
-title: lab and blog
-subtitle: <-->
+title: The Lab and Blog
+subtitle: <-Andreas Tiefenthaler->
 author: Andreas Tiefenthaler
 simple_search: http://google.com/search
 description: A notebook to document and keep track of things that come into my mind or i work on
@@ -93,7 +93,7 @@ disqus_short_name:
 disqus_show_comment_count: false
 
 # Google Analytics
-google_analytics_tracking_id: UA-39378771-1
+google_analytics_tracking_id: UA-18371679-3
 
 # Facebook Like
 facebook_like: false
