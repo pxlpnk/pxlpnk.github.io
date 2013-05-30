@@ -46,7 +46,7 @@ and add the ```post-receive``` hook by adding the following to the ```blog.git/h
 
 ``` sh post-receive hook
     #!/bin/sh
-    GIT_WORK_TREE=/src/www/blog git checkout -f
+    GIT_WORK_TREE=/srv/www/blog git checkout -f
 ```
 
 #### The deployment part
