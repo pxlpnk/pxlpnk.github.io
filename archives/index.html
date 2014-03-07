@@ -1,175 +1,124 @@
 
-<!DOCTYPE HTML>
-<html>
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
-	<meta name="google-site-verification" content="f1OtvP7JCHm6M9Ca7vMcFg3q-1NEOvDMcSKfKlVW_pA" />
-	<script data-cfasync="false" type="text/javascript" src="//use.typekit.net/axj3cfp.js"></script>
-	<script data-cfasync="false" type="text/javascript">try{Typekit.load();}catch(e){}</script>
-	<meta charset="utf-8">
-	<title>Blog Archives  | The Lab and Blog</title>
+  <meta charset="utf-8">
+  <title>Blog Archives - The Lab and Blog</title>
+  <meta name="author" content="Andreas Tiefenthaler">
 
-<meta name="author" content="Andreas Tiefenthaler"> 
+  
+  <meta name="description" content="Create an Interactive Console for Your Library With Pry
+Mar 07 2014 posted in pry, ruby Deploy Wordpress Using Git
+May 30 2013 posted in deployment &hellip;">
+  
 
-<meta name="description" content="A notebook to document and keep track of things that come into my mind or i work on"> <meta name="keywords" content="">
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  <link rel="canonical" href="http://pxlpnk.github.io/archives">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="The Lab and Blog" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-18371679-3']);
+    _gaq.push(['_trackPageview']);
 
-	<link href="/atom.xml" rel="alternate" title="The Lab and Blog" type="application/atom+xml">
-	<link rel="canonical" href="">
-	<link href="/favicon.png" rel="shortcut icon">
-	<link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
-	<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-	<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css" media="screen" />
-<script type="text/javascript" src="/fancybox/jquery.fancybox.pack.js"></script>
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
 
-<script language="Javascript" type="text/javascript">
-$(document).ready(
-  function() {
-    (function($) {
-      $(".fancybox[data-content-id]").each(function() {
-        this.href = $(this).data('content-id');
-      });
-      $(".fancybox").fancybox({
-        beforeLoad: function() {
-          var el, 
-              id = $(this.element).data('title-id');
 
-          if (id) {
-            el = $('#' + id);
-
-            if (el.length) {
-              this.title = el.html();
-            }
-          }
-          if ($(this).data('content')) {
-            this.content = $(this).data('content');
-          }
-        },
-        helpers: {
-          title: {
-            type: 'inside'
-          }
-        }
-      });
-    })(jQuery);
-  }
-);
-</script>
-	
 </head>
 
-
-<body>
-	<header id="header" class="inner"><h1><a href="/">The Lab and Blog</a></h1>
-<h4><-Andreas Tiefenthaler-></h4>
-<nav id="main-nav"><ul>
-	<li><a href="/">Blog</a></li>
-	<li><a href="/about">About</a></li>
-	<li><a href="/archives">Archive</a></li>
-</ul>
-</nav>
-<nav id="mobile-nav">
-	<div class="alignleft menu">
-		<a class="button">Menu</a>
-		<div class="container"><ul>
-	<li><a href="/">Blog</a></li>
-	<li><a href="/about">About</a></li>
-	<li><a href="/archives">Archive</a></li>
-</ul>
-</div>
-	</div>
-	<div class="alignright search">
-		<a class="button"></a>
-		<div class="container">
-			<form action="http://google.com/search" method="get">
-				<input type="text" name="q" results="0">
-				<input type="hidden" name="q" value="site:pxlpnk.github.io">
-			</form>
-		</div>
-	</div>
-</nav>
-
-
+<body   >
+  <header role="banner">
 
 </header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:pxlpnk.github.io" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul>
+	<li><a href="/">Blog</a></li>
+	<li><a href="/about">About</a></li>
+	<li><a href="/archives">Archive</a></li>
+</ul>
 
-	<div id="content" class="inner">
+</nav>
+  <div id="main">
+    <div id="content">
+      
 	
+<h1><a href="/blog/2014/03/07/create-a-console-for-your-library-with-pry/">Create an Interactive Console for Your Library With Pry</a></h1>
+<time datetime="2014-03-07T23:56:00+01:00" pubdate><span class='month'>Mar</span> <span class='day'>07</span> <span class='year'>2014</span></time>
 
+<footer>
+  <span class="categories">posted in <a class='category' href='/blog/categories/pry/'>pry</a>, <a class='category' href='/blog/categories/ruby/'>ruby</a></span>
+</footer>
 
-	
-	
-	<section class="archives"><h1 class="year">2014</h1>
-
-<article>
-	<h2 class="title"><a href="/blog/2014/03/07/create-a-console-for-your-library-with-pry/">Create an interactive console for your library with Pry</a></h2>
-	<div class="meta">
-		<span class="date">Mar  7</span>
-		<span class="tags">
-
-
-	<a class='category' href='/blog/categories/pry/'>pry</a>, <a class='category' href='/blog/categories/ruby/'>ruby</a>
-
-
-</span>
-	    
-	</div>
-</article>
-
-	
 
 
 	
-	
-		</section>
-	
-	<section class="archives"><h1 class="year">2013</h1>
+<h1><a href="/blog/2013/05/30/deploy-wordpress-using-git/">Deploy Wordpress Using Git</a></h1>
+<time datetime="2013-05-30T11:59:00+02:00" pubdate><span class='month'>May</span> <span class='day'>30</span> <span class='year'>2013</span></time>
 
-<article>
-	<h2 class="title"><a href="/blog/2013/05/30/deploy-wordpress-using-git/">Deploy Wordpress using Git</a></h2>
-	<div class="meta">
-		<span class="date">May 30</span>
-		<span class="tags">
+<footer>
+  <span class="categories">posted in <a class='category' href='/blog/categories/deployment/'>deployment</a>, <a class='category' href='/blog/categories/git/'>git</a>, <a class='category' href='/blog/categories/wordpress/'>wordpress</a></span>
+</footer>
 
 
-	<a class='category' href='/blog/categories/deployment/'>deployment</a>, <a class='category' href='/blog/categories/git/'>git</a>, <a class='category' href='/blog/categories/wordpress/'>wordpress</a>
 
-
-</span>
-	    
-	</div>
-</article>
-</div>
-	<footer id="footer" class="inner">Copyright &copy; 2014
+    </div>
+  </div>
+  <footer role="contentinfo">Copyright &copy; 2014
 
     Andreas Tiefenthaler
 
 <br>
 Powered by Octopress.
+
 </footer>
-	<script src="/javascripts/slash.js"></script>
-<script src="/javascripts/jquery.fancybox.pack.js"></script>
-<script type="text/javascript">
-(function($){
-	$('.fancybox').fancybox();
-})(jQuery);
-</script> <!-- Delete or comment this line to disable Fancybox -->
+  
 
 
 
 
-	<script type="text/javascript">
-		var _gaq = _gaq || [];
-		_gaq.push(['_setAccount', 'UA-18371679-3']);
-		_gaq.push(['_trackPageview']);
 
-		(function() {
-			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-		})();
-	</script>
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
 
 
 
