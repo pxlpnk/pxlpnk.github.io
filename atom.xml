@@ -4,7 +4,7 @@
   <title><![CDATA[The Lab and Blog]]></title>
   <link href="http://pxlpnk.github.io/atom.xml" rel="self"/>
   <link href="http://pxlpnk.github.io/"/>
-  <updated>2014-03-08T00:38:36+01:00</updated>
+  <updated>2014-03-08T00:39:08+01:00</updated>
   <id>http://pxlpnk.github.io/</id>
   <author>
     <name><![CDATA[Andreas Tiefenthaler]]></name>
@@ -14,7 +14,7 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Create an Interactive Console for Your Library With Pry]]></title>
+    <title type="html"><![CDATA[Create an interactive console for your library with Pry]]></title>
     <link href="http://pxlpnk.github.io/blog/2014/03/07/create-a-console-for-your-library-with-pry/"/>
     <updated>2014-03-07T23:56:00+01:00</updated>
     <id>http://pxlpnk.github.io/blog/2014/03/07/create-a-console-for-your-library-with-pry</id>
@@ -46,7 +46,7 @@ Within the console predefined structures and objects can be created to DRY up yo
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Deploy Wordpress Using Git]]></title>
+    <title type="html"><![CDATA[Deploy Wordpress using Git]]></title>
     <link href="http://pxlpnk.github.io/blog/2013/05/30/deploy-wordpress-using-git/"/>
     <updated>2013-05-30T11:59:00+02:00</updated>
     <id>http://pxlpnk.github.io/blog/2013/05/30/deploy-wordpress-using-git</id>
