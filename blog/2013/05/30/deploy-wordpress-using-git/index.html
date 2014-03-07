@@ -6,7 +6,7 @@
 	<script data-cfasync="false" type="text/javascript" src="//use.typekit.net/axj3cfp.js"></script>
 	<script data-cfasync="false" type="text/javascript">try{Typekit.load();}catch(e){}</script>
 	<meta charset="utf-8">
-	<title><-Andreas Tiefenthaler->  | The Lab and Blog</title>
+	<title>Deploy Wordpress using Git  | The Lab and Blog</title>
 
 <meta name="author" content="Andreas Tiefenthaler"> 
 
@@ -94,81 +94,9 @@ $(document).ready(
 
 </header>
 
-	<div id="content" class="inner">
-
-
-    <article class="post">
-	<h2 class="title">
-		
-		<a href="/blog/2014/03/07/create-a-console-for-your-library-with-pry/">
-		
-			Create an Interactive Console for Your Library With Pry</a>
-	</h2>
-	<div class="entry-content">
-		<p>When working on a library written in Ruby the interactive part of trying and using it during development is sometimes hard and painful.
-Tools like <a href="http://www.ruby-doc.org/stdlib-2.0/libdoc/irb/rdoc/IRB.html">irb</a> and <a href="http://pryrepl.org/">Pry</a> can help here a lot.
-In general every RubyGem should have a console to have your library right at your fingertips.
-This makes learning the API and becoming a look and feel way easier if someone wants to use your code or contribute to it.</p>
-
-<p>The easiest way to do this with Pry is to push your models into the load path, require them and start a Pry command line.</p>
-
-<figure class='code'><figcaption><span>./bin/console.rb</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="c1">#!/usr/bin/env ruby</span>
-</span><span class='line'><span class="vg">$LOAD_PATH</span> <span class="o">&lt;&lt;</span> <span class="s1">&#39;lib&#39;</span>
-</span><span class='line'><span class="nb">require</span> <span class="s1">&#39;your_models&#39;</span>
-</span><span class='line'><span class="nb">require</span> <span class="s1">&#39;pry&#39;</span>
-</span><span class='line'>
-</span><span class='line'><span class="ss">Pry</span><span class="p">:</span><span class="ss">:CLI</span><span class="o">.</span><span class="n">parse_options</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>In combination with <a href="https://github.com/ConradIrwin/pry-rescue">pry-rescue</a> and <a href="https://github.com/nixme/pry-debugger">pry-debugger</a> or <a href="https://github.com/deivid-rodriguez/pry-byebug">pry-byebug</a> this turns into a very powerful tool to speedup your development process.
-Within the console predefined structures and objects can be created to DRY up your workflow.</p>
-
-		
-		
-	</div>
-
-
-<div class="meta">
-	<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-03-07T23:56:00+01:00" pubdate data-updated="true">Mar 7<span>th</span>, 2014</time></div>
-	<div class="tags">
-
-
-	<a class='category' href='/blog/categories/pry/'>pry</a>, <a class='category' href='/blog/categories/ruby/'>ruby</a>
-
-
-</div>
-	
-</div></article>
-
-
-    <article class="post">
-	<h2 class="title">
-		
-		<a href="/blog/2013/05/30/deploy-wordpress-using-git/">
-		
-			Deploy Wordpress Using Git</a>
-	</h2>
-	<div class="entry-content">
-		<p>A few weeks ago I came into the joy of setting up one or another Wordpress Blog. Copying files around after every change felt so 90ies and also introduced a lot of errors while working on the blog itself.</p>
+	<div id="content" class="inner"><article class="post">
+	<h2 class="title">Deploy Wordpress Using Git</h2>
+	<div class="entry-content"><p>A few weeks ago I came into the joy of setting up one or another Wordpress Blog. Copying files around after every change felt so 90ies and also introduced a lot of errors while working on the blog itself.</p>
 
 <p>Being a huge fan of git I found a nice way to deploy any Wordpress blog and any static website using git. First of all you need a server with SSH access and some rights on that machine.</p>
 
@@ -235,10 +163,7 @@ Within the console predefined structures and objects can be created to DRY up yo
 
 
 <p>After a successfully running the last command your changes should be in <code>/srv/www/blog/</code>.</p>
-
-		
-		
-	</div>
+</div>
 
 
 <div class="meta">
@@ -265,11 +190,20 @@ Within the console predefined structures and objects can be created to DRY up yo
 	
 </div></article>
 
-<nav id="pagenavi">
-    
-    
-    <div class="center"><a href="/archives">Blog Archives</a></div>
-</nav></div>
+	<div class="share">
+	<div class="addthis_toolbox addthis_default_style ">
+	
+	
+	<a class="addthis_button_tweet"></a>
+	
+	
+<!---	<a class="addthis_counter addthis_pill_style"></a> --->
+	</div>
+  <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid="></script>
+</div>
+
+
+</div>
 	<footer id="footer" class="inner">Copyright &copy; 2014
 
     Andreas Tiefenthaler

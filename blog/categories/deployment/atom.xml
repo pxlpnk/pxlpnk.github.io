@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: deployment | The Lab and Blog]]></title>
+  <link href="http://pxlpnk.github.io/blog/categories/deployment/atom.xml" rel="self"/>
+  <link href="http://pxlpnk.github.io/"/>
+  <updated>2014-03-08T00:24:00+01:00</updated>
+  <id>http://pxlpnk.github.io/</id>
+  <author>
+    <name><![CDATA[Andreas Tiefenthaler]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Deploy Wordpress using Git]]></title>
+    <link href="http://pxlpnk.github.io/blog/2013/05/30/deploy-wordpress-using-git/"/>
+    <updated>2013-05-30T11:59:00+02:00</updated>
+    <id>http://pxlpnk.github.io/blog/2013/05/30/deploy-wordpress-using-git</id>
+    <content type="html"><![CDATA[<p>A few weeks ago I came into the joy of setting up one or another Wordpress Blog. Copying files around after every change felt so 90ies and also introduced a lot of errors while working on the blog itself.</p>
+
+<p>Being a huge fan of git I found a nice way to deploy any Wordpress blog and any static website using git. First of all you need a server with SSH access and some rights on that machine.</p>
+
+<h4>The local part</h4>
+
+<p>First we create a Git repository in your  Wordpress/Website folder.</p>
+
+<p>``` bash</p>
+
+<pre><code>cd wordpress_blog
+git init
+git add .
+git commit -m 'Initial commit'
+</code></pre>
+
+<p>```</p>
+
+<h4>The remote part</h4>
+
+<p>Create bare repository to mirror your local Wordpress source.</p>
+
+<p>``` bash</p>
+
+<pre><code>mkdir blog.git &amp;&amp; cd blog.git
+git init --bare
+</code></pre>
+
+<p>```</p>
+
+<p>Keep this repository separated from any the webroot and do not make it accessible to the outside world in any way.</p>
+
+<p>Now we need to create the directory where the blog should be deployed to</p>
+
+<p>``` bash</p>
+
+<pre><code>mkdir /srv/www/blog/
+</code></pre>
+
+<p>```</p>
+
+<p>and add the <code>post-receive</code> hook by adding the following to the <code>blog.git/hooks/post-receive</code> file and making it executable <code>chmod +x blog.git/hooks/post-receive</code>.</p>
+
+<p>``` sh post-receive hook</p>
+
+<pre><code>#!/bin/sh
+GIT_WORK_TREE=/srv/www/blog git checkout -f
+</code></pre>
+
+<p>```</p>
+
+<h4>The deployment part</h4>
+
+<p>Now we need to add the new remote we just created to your repository and push our source code.</p>
+
+<p>``` bash</p>
+
+<pre><code>git remote add blog ssh://blog.example.com/home/USER/blog.git
+git push blog +master:refs/heads/master
+</code></pre>
+
+<p>```</p>
+
+<p>To deploy your changes now you need to commit them and then push to your remote.
+``` bash</p>
+
+<pre><code>git push blog
+</code></pre>
+
+<p>```</p>
+
+<p>After a successfully running the last command your changes should be in <code>/srv/www/blog/</code>.</p>
+]]></content>
+  </entry>
+  
+</feed>

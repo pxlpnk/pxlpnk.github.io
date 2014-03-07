@@ -6,7 +6,7 @@
 	<script data-cfasync="false" type="text/javascript" src="//use.typekit.net/axj3cfp.js"></script>
 	<script data-cfasync="false" type="text/javascript">try{Typekit.load();}catch(e){}</script>
 	<meta charset="utf-8">
-	<title><-Andreas Tiefenthaler->  | The Lab and Blog</title>
+	<title>Create an interactive console for your library with Pry  | The Lab and Blog</title>
 
 <meta name="author" content="Andreas Tiefenthaler"> 
 
@@ -94,18 +94,9 @@ $(document).ready(
 
 </header>
 
-	<div id="content" class="inner">
-
-
-    <article class="post">
-	<h2 class="title">
-		
-		<a href="/blog/2014/03/07/create-a-console-for-your-library-with-pry/">
-		
-			Create an Interactive Console for Your Library With Pry</a>
-	</h2>
-	<div class="entry-content">
-		<p>When working on a library written in Ruby the interactive part of trying and using it during development is sometimes hard and painful.
+	<div id="content" class="inner"><article class="post">
+	<h2 class="title">Create an Interactive Console for Your Library With Pry</h2>
+	<div class="entry-content"><p>When working on a library written in Ruby the interactive part of trying and using it during development is sometimes hard and painful.
 Tools like <a href="http://www.ruby-doc.org/stdlib-2.0/libdoc/irb/rdoc/IRB.html">irb</a> and <a href="http://pryrepl.org/">Pry</a> can help here a lot.
 In general every RubyGem should have a console to have your library right at your fingertips.
 This makes learning the API and becoming a look and feel way easier if someone wants to use your code or contribute to it.</p>
@@ -129,10 +120,7 @@ This makes learning the API and becoming a look and feel way easier if someone w
 
 <p>In combination with <a href="https://github.com/ConradIrwin/pry-rescue">pry-rescue</a> and <a href="https://github.com/nixme/pry-debugger">pry-debugger</a> or <a href="https://github.com/deivid-rodriguez/pry-byebug">pry-byebug</a> this turns into a very powerful tool to speedup your development process.
 Within the console predefined structures and objects can be created to DRY up your workflow.</p>
-
-		
-		
-	</div>
+</div>
 
 
 <div class="meta">
@@ -159,117 +147,20 @@ Within the console predefined structures and objects can be created to DRY up yo
 	
 </div></article>
 
-
-    <article class="post">
-	<h2 class="title">
-		
-		<a href="/blog/2013/05/30/deploy-wordpress-using-git/">
-		
-			Deploy Wordpress Using Git</a>
-	</h2>
-	<div class="entry-content">
-		<p>A few weeks ago I came into the joy of setting up one or another Wordpress Blog. Copying files around after every change felt so 90ies and also introduced a lot of errors while working on the blog itself.</p>
-
-<p>Being a huge fan of git I found a nice way to deploy any Wordpress blog and any static website using git. First of all you need a server with SSH access and some rights on that machine.</p>
-
-<h4>The local part</h4>
-
-<p>First we create a Git repository in your  Wordpress/Website folder.</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nb">cd </span>wordpress_blog
-</span><span class='line'>git init
-</span><span class='line'>git add .
-</span><span class='line'>git commit -m <span class="s1">&#39;Initial commit&#39;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<h4>The remote part</h4>
-
-<p>Create bare repository to mirror your local Wordpress source.</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>mkdir blog.git <span class="o">&amp;&amp;</span> <span class="nb">cd </span>blog.git
-</span><span class='line'>git init --bare
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Keep this repository separated from any the webroot and do not make it accessible to the outside world in any way.</p>
-
-<p>Now we need to create the directory where the blog should be deployed to</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>mkdir /srv/www/blog/
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>and add the <code>post-receive</code> hook by adding the following to the <code>blog.git/hooks/post-receive</code> file and making it executable <code>chmod +x blog.git/hooks/post-receive</code>.</p>
-
-<figure class='code'><figcaption><span>post-receive hook</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="c">#!/bin/sh</span>
-</span><span class='line'><span class="nv">GIT_WORK_TREE</span><span class="o">=</span>/srv/www/blog git checkout -f
-</span></code></pre></td></tr></table></div></figure>
-
-
-<h4>The deployment part</h4>
-
-<p>Now we need to add the new remote we just created to your repository and push our source code.</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>git remote add blog ssh://blog.example.com/home/USER/blog.git
-</span><span class='line'>git push blog +master:refs/heads/master
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>To deploy your changes now you need to commit them and then push to your remote.</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>git push blog
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>After a successfully running the last command your changes should be in <code>/srv/www/blog/</code>.</p>
-
-		
-		
+	<div class="share">
+	<div class="addthis_toolbox addthis_default_style ">
+	
+	
+	<a class="addthis_button_tweet"></a>
+	
+	
+<!---	<a class="addthis_counter addthis_pill_style"></a> --->
 	</div>
-
-
-<div class="meta">
-	<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-05-30T11:59:00+02:00" pubdate data-updated="true">May 30<span>th</span>, 2013</time></div>
-	<div class="tags">
-
-
-	<a class='category' href='/blog/categories/deployment/'>deployment</a>, <a class='category' href='/blog/categories/git/'>git</a>, <a class='category' href='/blog/categories/wordpress/'>wordpress</a>
+  <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid="></script>
+</div>
 
 
 </div>
-	
-</div></article>
-
-<nav id="pagenavi">
-    
-    
-    <div class="center"><a href="/archives">Blog Archives</a></div>
-</nav></div>
 	<footer id="footer" class="inner">Copyright &copy; 2014
 
     Andreas Tiefenthaler
