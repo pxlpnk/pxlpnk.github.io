@@ -4,7 +4,7 @@
   <title><![CDATA[The Lab and Blog]]></title>
   <link href="http://pxlpnk.github.io/atom.xml" rel="self"/>
   <link href="http://pxlpnk.github.io/"/>
-  <updated>2014-03-08T00:39:08+01:00</updated>
+  <updated>2014-03-08T13:28:04+01:00</updated>
   <id>http://pxlpnk.github.io/</id>
   <author>
     <name><![CDATA[Andreas Tiefenthaler]]></name>
@@ -18,10 +18,10 @@
     <link href="http://pxlpnk.github.io/blog/2014/03/07/create-a-console-for-your-library-with-pry/"/>
     <updated>2014-03-07T23:56:00+01:00</updated>
     <id>http://pxlpnk.github.io/blog/2014/03/07/create-a-console-for-your-library-with-pry</id>
-    <content type="html"><![CDATA[<p>When working on a library written in Ruby the interactive part of trying and using it during development is sometimes hard and painful.
-Tools like <a href="http://www.ruby-doc.org/stdlib-2.0/libdoc/irb/rdoc/IRB.html">irb</a> and <a href="http://pryrepl.org/">Pry</a> can help here a lot.
+    <content type="html"><![CDATA[<p>When working on a library written in Ruby the interactive part of trying and using it during development is sometimes hard and difficult.
+Tools like <a href="http://www.ruby-doc.org/stdlib-2.0/libdoc/irb/rdoc/IRB.html">irb</a> and <a href="http://pryrepl.org/">Pry</a> come in handy here.
 In general every RubyGem should have a console to have your library right at your fingertips.
-This makes learning the API and becoming a look and feel way easier if someone wants to use your code or contribute to it.</p>
+This makes learning the API and become comfortable with the interface way easier if someone wants to use your code or contribute to it.</p>
 
 <p>The easiest way to do this with Pry is to push your models into the load path, require them and start a Pry command line.</p>
 
